@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sayHello1()">Gán event click trực tiếp</button>
+    <button id="btn-click">Gán event click thông qua DOM</button>
+
+
+    <div>
+        <input id="email" placeholder="Nhập email"/>
+        <input id="password" placeholder="Nhập password"/>
+        <button>Đăng nhập</button>
+    </div>
+    <script>
+        function sayHello1() {
+            alert("Xin chào, onclick1");
+        }
+        function sayHello2() {
+            alert("Xin chào, onclick2");
+        }
+        document.getElementById("btn-click").onclick = sayHello2;
+    </script>
+</body>
+</html>

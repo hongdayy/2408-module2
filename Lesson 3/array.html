@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Cho mảng sau: numbers = [10, 4, 7, 9, 100, 3, -21, 0, 33];
+
+// Tìm phần tử nhỏ nhất / lớn nhất trong mảng.
+let arr = [10, 4, 7, 9, 100, 3, -21, 0, 33];
+let min = arr[0];
+let max = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(min > arr[i]) {
+            min = arr[i];
+        } 
+        if(arr[i] >  max) {
+            max = arr[i];
+
+        }
+        
+    }
+console.log(max);
+console.log(min);
+
+// Tính tổng các phần tử trong mảng.
+let tong = 0;
+for (let i = 0; i < arr.length; i++) {
+     tong += arr[i];
+    
+}
+console.log(tong);
+// Tình trung bình cộng các phần tử trong máng. Tìm phần tử đầu tiên chia hết cho 3 trong máng.
+let tbc = tong / arr.length;
+console.log(tbc);
+
+let find;
+for (let i = 0; i < arr.length; i++) {
+     if( arr[i] % 3 === 0) {
+        find = arr[i];
+        break;
+     }
+       
+}
+console.log(find);  
+
+
+
+// Tìm các phần tử là số nguyên tố trong màng.
+let cout = 0;
+for (let i = 0; i < arr.length; i++) {
+     let num = arr[i];
+       
+
+if(num > 1){
+    let isPrime = true;
+
+for (let j = 2; j <= Math.sqrt(num); j++) {
+     if(num % j == 0) {
+        isPrime = false;
+        break
+     }
+       
+}
+if(isPrime){
+    cout++;
+}
+}
+}
+console.log(cout)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

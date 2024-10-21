@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+// 0. Hãy viết chương trình nhập vào một chuỗi s. Nếu chuỗi s có độ dài >= 8, in ra màn hình console “Chuỗi này ok”. 
+// Ngược lại, in ra “Ngắn quá, dài thêm tí nữa”.
+
+
+// var s = prompt("Nhập vào một chuỗi s:");
+// if (s.length >= 8) {
+//     console.log("Chuỗi này OK");
+    
+// } else {
+//     console.log("Ngắn quá, dài thêm tí nữa");
+// }
+
+
+
+// 1. Hãy viết chương trình nhập vào một số a. 
+// Nếu a >= 18, in ra màn hình console “Đủ 18 thì quẩy tiếp”. 
+// Nếu a >= 16, in ra “Đợi thêm ít năm nữa”. 
+// Ngược lại, in ra “Còn quá nà trẻ”.
+
+
+// var a = prompt("Nhập vào 1 số a:");
+// if (a >= 18) {
+//     console.log("Đủ 18 thì quẩy tiếp");
+    
+// } else if (a >= 16) {
+//     console.log("Đợi thêm ít năm nữa");
+    
+// } else {
+//     console.log("Còn quá nà trẻ");
+// }
+
+
+// Quizz
+// 0. Hãy tính tổng các số từ 1 đến 50.
+var result = 0;
+for(var i = 1; i <= 50; i++) {
+    result += i;
+    
+}
+console.log(result);
+
+
+// 1. Hãy tính tổng các số chẵn từ -10 đến 50.
+var result = 0;
+for( var i = -10; i<=50; i++) {
+    if(i % 2 == 0) {
+        result += i;
+    }
+    
+}
+console.log(result);
+// 2. Hãy in ra màn hình console các số chia hết cho 9 trong đoạn [-100; 100]
+for(var i = -100; i <= 100; i++) {
+    if(i % 9 == 0 ) {
+        console.log(i);
+    }
+}
+// 3. Hãy dùng while để in ra dãy số từ 1 đến 200.
+var i = 1;
+while (i <= 200 ) {
+    console.log(i);
+    i++;
+    
+}
+
+// 4. Hãy nhập vào 1 chuỗi s và 1 số l. Hãy thêm vào cuối chuỗi s ký tự ‘a’ cho đến khi độ dài chuỗi s >= l.
+// var s = prompt("Nhập vào 1 chuỗi s:");
+// var one = prompt("Nhập vào 1:");
+// while (s.length <=1) {
+//     s+='a';
+    
+// }
+// console.log(s);
+
+
+// 5. Nhập vào 2 số 0 <= x < y <= 100. Hãy tăng dần giá trị của x, giảm dần giá trị của y và in ra các giá trị của x và y trong mỗi lần lặp cho
+// đến khi x >= y
+// var x = Number(prompt("Nhập x:"));
+// var y = Number(prompt("Nhập y:"));
+// if(x < 0 || x >= y || y > 100) {
+//     console.log("sai");
+// } else {
+//     while (x < y) {
+//         x++;
+//         y--;
+        
+//     }
+//     console.log("Giá trị x:", x);
+//     console.log("Giá trị y:", y);
+// }
+
+
+// Thực hành
+// 1. In ra dãy số từ 1 đến 500.
+var i = 1;
+while (i <= 500) {
+    console.log(i);
+    i++;
+    
+}
+// 2. In ra các số chia hết cho 2 và 3 từ 1 đến 300.
+for(var i = 1; i <= 300; i++) {
+    if(i % 2 == 0 && i % 3 == 0) {
+        console.log(i);
+
+    }
+}
+// 3. Tính tổng các số chẵn trong đoạn [-30, 50].
+var result = 0;
+for(var i = -30; i <= 50; i++) {
+    if(i % 2 == 0) {
+        result += i;
+    }
+    
+}
+console.log(result);
+
+// 4. Nhập vào số n. Tính giai thừa của số n.
+var n = Number(prompt("nhập vào số n: "));
+var factorial = 1;
+for( var i = 1; i <= n; i++) {
+    factorial *= i;
+}
+console.log("factorial: ", factorial)
+
+
+    </script>
+</body>
+</html>

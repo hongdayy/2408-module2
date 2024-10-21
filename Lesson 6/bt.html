@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- BÀI 1 -->
+    <div style="display: flex">
+        <div>
+            <div>
+                <label>URL</label>
+                <input type="text" id="url" placeholder="Nhập url của ảnh" />
+            </div>
+            <div style="margin-top: 10px;">
+                <label>Chiều rộng</label>
+                <input type="number" id="width" placeholder="Nhập chiều rộng" />
+            </div>
+            <div style="margin-top: 10px;">
+                <label>Chiều cao</label>
+                <input type="number" id="height" placeholder="Nhập chiều cao" />
+            </div>
+            <div style="margin-top: 10px;">
+                <label>Border Radius</label>
+                <input type="number" id="borderRadius" placeholder="Nhập border radius" />
+            </div>
+            <div style="margin-top: 10px;">
+                <label>Alt</label>
+                <input type="text" id="alt" placeholder="Nhập văn bản alt" />
+            </div>
+        </div>
+        <div style="margin-left: 50px;">
+            <img 
+                id="image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGHNvA8j26-L1GlzL0p1VUtbjuJEVPMVw_bg&s" 
+                style="width: 100px; height: 100px;"
+                alt="Ảnh mặc định"
+            />
+        </div>
+    </div>
+    <script>
+        // const $inputURL = document.getElementById('url');
+        // const inputWidth = document.getElementById("width");
+        // const inputHeight = document.getElementById("height");
+        // const inputBorderRadius = document.getElementById("borderRadius");
+        // const inputAlt = document.getElementById("alt");
+
+        // $inputURL.oninput = function () {
+        //     const newURL = $inputURL.value;
+        //     $image.src = newURL;
+        // }
+
+        // inputWidth.oninput = function() {
+        //     const newWidth = inputWidth.value;
+        //     image.style.width = newWidth + "px";
+        // }
+
+        // $inputHeight.oninput = function () {
+        //     const newHeight = $inputHeight.value;
+        //     $image.style.height = newHeight + 'px';
+        // }
+
+        // $inputBorderRadius.oninput = function () {
+        //     const newBorderRadius = $inputBorderRadius.value;
+        //     $image.style.borderRadius = newBorderRadius + 'px';
+        // }
+
+        // $inputAlt.oninput = function () {
+        //     const newAlt = $inputAlt.value; 
+        //     $image.alt = newAlt;
+        // }
+    </script>
+
+
+    <!-- BÀI 2 -->
+    <!-- <input type="text" id="input" placeholder="Nhập nội dung công việc mới" />
+    <button id="add-button">Tạo công việc</button>
+    <h1>Danh sách công việc cần làm</h1>
+    <ul id="list"></ul>
+
+    <script>
+        const addButton = document.getElementById("add-button");
+        const addInput = document.getElementById("input");
+        const addList = document.getElementById("list");
+
+        addButton.onclick = function(){
+            const text = addInput.value;
+        
+        const element = document.createElement("li");
+        element.innerText = text;
+        addList.appendChild(element);
+        } -->
+
+
+    </script>
+
+
+    <!-- BÀI 3 -->
+    <!-- <style>
+        table {
+        width: 50%;
+        
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+       
+    </style>
+    <h1>Danh sách người dùng</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="user">
+            <tr>
+                <td>1</td>
+                <td>Name 1</td>
+                <td>Address 1</td>
+                <td><button class="delete">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Name 2</td>
+                <td>Address 2</td>
+                <td><button class="delete">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Name 3</td>
+                <td>Address 3</td>
+                <td><button class="delete">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Name 4</td>
+                <td>Address 4</td>
+                <td><button class="delete">Xóa</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+    const deleteButtons = document.querySelectorAll('.delete');
+
+for (const button of deleteButtons) {
+    button.onclick = function() {
+        const checkButton = button; 
+        const row = checkButton.parentNode.parentNode; 
+        row.parentNode.removeChild(row); 
+    };
+}
+    </script> -->
+
+
+
+    <!-- BÀI 4 -->
+    <div>
+        <h3>Đăng ký tài khoản</h3>
+        <div style="margin-top: 8px">
+            <label>Họ và tên <span style="color: red">*</span></label>
+            <input type="text" id="fullname" />
+        </div>
+        <div style="margin-top: 8px">
+            <label>Giới tính</label>
+            <select>
+                <option>Name</option>
+                <option>Nữ</option>
+            </select>
+        </div>
+        <div style="margin-top: 8px">
+            <label>Tuổi</label>
+            <input type="number" id="age" />
+        </div>
+        <div style="margin-top: 8px">
+            <label>Địa chỉ</label>
+            <input type="text" id="address" />
+        </div>
+        <div style="margin-top: 8px">
+            <label>Email <span style="color: red">*</span></label>
+            <input type="email" id="email" />
+        </div>
+        <div style="margin-top: 8px">
+            <label>Mật khẩu<span style="color: red">*</span></label>
+            <input type="password" id="password" />
+        </div>
+        <div>
+            <button id="register">Đăng ký</button>
+        </div>
+    </div>
+
+    <script>
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        document.getElementById("register").onclick = function(){
+            const fullname = document.getElementById("fullname").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if(fullname.trim() === '' || email.trim() === '' || password.trim() === ''){
+                alert('Vui lòng nhập đủ thông tin')
+                return;
+            }
+
+            if(password.trim().length < 6){
+                alert('Mật khẩu tối thiểu 6 ký tự')
+                return;
+            }
+            if(fullname.trim().length < 2){
+                alert('Họ và tên')
+                return;
+            }
+            if(validateEmail(email) === false){
+                alert('Email không hợp lệ')
+                return;
+            }
+
+            alert('Đăng ký thành công')
+        }
+    </script>
+  
+        
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2">Nội dung thẻ H2</h2>
+
+    <div id="box"></div>
+
+    <div class="product-item" data-id="1234" data-category="123">
+        Ảnh
+        Tiêu đề
+        Giá
+    </div>
+
+    <div class="product-item" data-id="3456" data-category="123"></div>
+        Ảnh
+        Tiêu đề
+        Giá
+    </div>
+    <script>
+        // const h2 = document.querySelector("#h2");
+        // const contentH2 = h2.innerHTML;
+        // console.log(contentH2);
+
+        // const box = document.querySelector("#box");
+        // box.innerHTML = contentH2;
+    </script>
+
+    <script>
+        const productList = document.querySelectorAll(".product-item");
+       
+        let cart = [];
+
+        console.log(productList);
+        [...productList].forEach(item => {
+           const dataId =  item.getAttribute("data-id");
+           cart.push(dataId);
+           
+           item.setAttribute("data-category", "234");
+           item.setAttribute("class", "product-item product-test");
+
+        });
+        console.log(cart);
+
+    </script>
+    
+</body>
+</html>

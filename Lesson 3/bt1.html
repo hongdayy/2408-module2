@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 1. Khai báo 1 mảng gồm các số bất kỳ. 
+// -Tính tích của các phần tử trong mảng đó.
+var arr1 = [2, 3, 4, 5, 6];
+var tich = 1;
+for(var i = 0; i < arr1.length; i++) {
+    tich *= arr1[i];
+}
+console.log(tich);
+// -Tìm số nhỏ nhất mà chia hết cho 2 trong mảng.
+var min = arr1[0];
+for( i = 0; i < arr1.length; i++) {
+    if(arr1[i] % 2 ===0 && arr1[i] < min) {
+       min = arr1[i];
+    }
+     
+}
+console.log(min);  
+
+// -Tìm số lớn nhất mà chia hết cho 3 trong mảng.
+var max = arr1[0];
+for(var i = 0; i < arr1.length; i++) {
+    if(arr1[i] % 3 ===0 && arr1[i] > max) {
+        max = arr1[i];
+    }
+  
+}
+console.log(max);
+// -Tính giá trị trung bình của mảng.
+var tong = 0;
+for(i = 0; i < arr1.length; i++) {
+    tong += arr1[i];
+    
+
+}
+var tb = tong / arr1.length; 
+console.log(tb);
+// -Lọc ra các số nguyên tố trong mảng.
+var snt = [];
+for(i = 0; i< arr1.length; i++) {
+    var isPrime = true;
+    if(arr1[i] < 2) {
+        isPrime = false;
+    }
+
+ else {
+    var j = 2;
+    while (j <= Math.sqrt(arr1[i])) {
+            if (arr1[i] % j === 0) {
+                isPrime = false; // Nếu chia hết cho j thì không phải số nguyên tố
+                break; // Thoát khỏi vòng lặp vì đã biết không phải số nguyên tố
+            }
+            j++;
+        }
+    }
+
+    // Nếu isPrime vẫn là true, nghĩa là số đó là số nguyên tố
+    if (isPrime) {
+        snt.push(arr1[i]); // Thêm số nguyên tố vào mảng
+    }
+}
+
+console.log(snt); // In ra các số nguyên tố
+
+
+
+// -Kiểm tra xem trong mảng có số nhỏ hơn 10 hay không.
+var check = false;
+for( i = 0; i <arr1.length; i++) {
+    if(arr1[i] < 10) {
+        console.log(arr1[i]);
+        check = true;
+        
+    } 
+    }
+    
+    if(!check) {
+        console.log("ko số nào")
+    }
+
+// -Kiểm tra xem tất cả phần tử trong mảng có lớn hơn 20 không.
+
+var found = true;
+for( i = 0; i <arr1.length; i++) {
+    if(arr1[i] <= 20) {
+        found = false;
+        break;
+        
+    } 
+    }
+    
+    if(!found) {
+        console.log("tất cả >20");
+    }
+    
+   
+// -Nhập vào số n cho đến khi n là 1 số trong mảng s.
+// var s = [2, 3, 4 , 5];
+// do {
+//     var n = parseInt(prompt("Nhập n:"));
+// } while (!s.includes(n)); // lặp cho đến khi n trong mảng s
+// console.log(n);
+
+// // -Sử dụng thuật toán Bubble Sort để sắp xếp phần tử theo thứ tự tăng dần. (https://www.geeksforgeeks.org/bubble-sort/)
+// for (var i = 0; i < s.length - 1; i++) {
+//     for (var j = 0; j < s.length - 1 - i; j++) {
+//         if (s[j] > s[j + 1]) {
+//             // Hoán đổi vị trí nếu phần tử hiện tại lớn hơn phần tử kế tiếp
+//             var temp = s[j];
+//             s[j] = s[j + 1];
+//             s[j + 1] = temp;
+//         }
+//     }
+//     }
+// console.log(s);
+
+// 2. Khai báo 1 mảng s gồm các chuỗi bất kỳ. Nhập vào 1 chuỗi text.
+// -Tìm 1 chuỗi đầu tiên có độ dài nhỏ nhất trong mảng.
+var s2 = ["hi", "hello", "xin chao"];
+var text = prompt("Nhập 1 chuỗi text: ");
+var min2 = s2[0];
+for(var i = 1; i < s2.length; i++) {
+    if(s2[i].length < min2.length) {
+        min2 = s2[i];
+    }
+
+}
+console.log(min2);
+
+// -Tìm những chuỗi trong mảng có chứa giá trị text.
+var find2 = [];
+for(var i = 0; i < s2.length; i++) {
+    if (s2[i].includes(text)) {
+        find2.push(s2[i]);
+    }
+}
+console.log(find2);
+
+
+
+// -Tạo mảng mới newS gồm các phần tử có giá trị là 3 ký tự đầu tiên của từng phần tử trong s.
+var newS = [];
+for(var i = 0; i < s2.length; i++) {
+    newS.push(s2[i].substring(0, 3));
+}
+console.log(newS);
+
+// -Tạo ra 1 chuỗi là sự kết hợp của các phần tử trong s. Mỗi phần tử cách nhau bởi dấu ‘-’.
+
+let newString = "";  
+
+for (let i = 0; i < s.length; i++) {  
+    newString += s2[i];  // : Mỗi lần lặp, giá trị của phần tử thứ i trong mảng s được cộng thêm vào chuỗi
+    
+    // phần tử cuối cùng trong mảng là -1
+    if (i < s2.length - 1) {  
+        newString += "-";  // Thêm dấu gạch ngang giữa các phần tử
+    }
+}
+
+console.log(newString);  // Hiển thị chuỗi kết quả
+
+// 3. Nhập vào 2 dãy số d1, d2. Mỗi số trong mỗi dãy cách nhau bởi dấu ‘,’.
+let d1 = prompt("Nhập d1:");
+let d2 = prompt("Nhập d2:");
+
+
+
+// -Kiểm tra xem tất cả các giá trị số trong d1 có nằm trong d2 không.
+// -Kiểm tra xem có phần tử nào trong d2 chia hết cho tổng của d1 không.
+// -Tạo mảng mới gồm các số có giá trị là các số chia hết cho 2 lần lượt trong d2 và d1.
+// -Giả sử d1, d2 là các dãy số xếp theo thứ tự tăng dần. Hãy tạo ra 1 dãy số theo thứ tự tăng dần bao gồm các số của d1 và d2 (Sử dụng core của thuật toán Merge Sort).(https://www.geeksforgeeks.org/merge-sort/?ref=lbp)
+// 4. Cho mảng đa chiều biểu thị mức độ tăng trưởng của 1 công ty qua các quý và năm tương ứng.
+// Dữ liệu của năm: theo hàng.
+// Dữ liệu của quý: theo cột.
+// let growth = [
+//     [5,8,9,16],
+//     [2,7,1,9],
+//     [5,6,8,12],
+//     [10,2,1,8],
+//     [20,4,9,1]
+// ]
+// -Tạo mảng mới gồm các phần tử có giá trị là trung bình tăng trưởng của từng năm (Tính trung bình theo hàng).
+// -Tìm giá trị tăng trưởng trung bình theo năm lớn nhất.
+// -Tìm giá trị tăng trưởng theo quý lớn nhất.
+
+let growth = [
+    [5,8,9,16], // năm 1
+    [2,7,1,9], // năm 2
+    [5,6,8,12], // năm 3
+    [10,2,1,8], // năm 4
+    [20,4,9,1] // năm 5
+]
+// -Tạo mảng mới gồm các phần tử có giá trị là trung bình tăng trưởng
+//  của từng năm (Tính trung bình theo hàng).
+const result = [];
+for(let element of growth){
+    console.log(element)
+    let sum = 0;
+    for(let number of element){
+        sum = sum + number;
+    }
+    console.log(sum)
+    const avg = sum / element.length;
+    result.push(avg);
+}
+
+// -Tìm giá trị tăng trưởng trung bình theo năm lớn nhất.
+let max = result[0];
+for(let element of result){
+    if(element > max){
+        max = element;
+    }
+}
+
+// -Tìm giá trị tăng trưởng theo quý lớn nhất.
+let max2 = growth[0][0];
+for(let row of growth){
+    for(let number of row){
+        if(number > max2){
+            max2 = number;
+        }
+    }
+}
+
+// -Tính giá trị tăng trưởng trung bình theo quý của các năm 
+// (Tính trung bình theo cột).
+const listAvg = [];
+for(let col = 0; col<growth[0].length; col++){
+    let sum = 0;
+    for(let row = 0; row<growth.length; row++){
+        console.log(growth[row][col]);
+        sum = sum + growth[row][col];
+    }
+    const avg = sum/growth.length;
+    listAvg.push(avg);
+}
+console.log(listAvg);
+// -Tính giá trị tăng trưởng trung bình theo quý của các năm (Tính trung bình theo cột).
+// 5. Tạo ra 1 mảng gồm các số bất kỳ. Hãy tính tổng của các số lẻ có trong mảng.
+// 6. Nhập vào 1 dãy số s. Mỗi số cách nhau bởi dấu “,”.
+// -Tìm số đầu tiên trong dãy lớn hơn 5 và chia hết cho 2.
+// -Tìm tất cả số lẻ trong dãy s .
+// -Biến đổi dãy s thành dãy x mà các phần tử của dãy x là bình phương các phần tử của dãy s.
+    </script>
+</body>
+</html>

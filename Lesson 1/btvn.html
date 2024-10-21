@@ -1,0 +1,100 @@
+<!-- ```jsx
+1. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây?  Giải thích vì sao có kết quả đó?
+x = true, y = true, z = false
+
+x && y && z → ?  false vì && (AND) trả về kết quả là true khi cả hai toán hạng đều true.
+x && y && !z → ? true  vì ! (NOT) Chuyển đổi giá trị của toán hạng từ true sang false hoặc từ false sang true. mà vế trước z là false=> true, cả 3 true
+(x && y) || z → ? true vì chỉ trả về true  khi cả hai hoặc một trong hai toán hạng là true.
+(x && y) || !z → ? true vì cả hai toán hạng là true.
+x && (y || z) → ? true + true -> true
+x && !(y || z) → ? true + false -> false
+x && (y || !z) → ? true + true -> true
+x && (!y || z) → ? true + false -> false
+ 
+2. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây?  Giải thích vì sao có kết quả đó?
+name = 'AAA', age = 20, isGood = true
+
+age + 10 = ? 20 + 10= 30
+age % 3 = ? 20 % 3 = 2
+name + ' BBB' = ? 'AAA BBB'
+!isGood = ? !true = false
+name == 'aaa' && age >= 20 → ? false + true = false
+name != 'aaa' && isGood → ? true + true = true
+!(age < 10) && !isGood → ? true + false -> false
+
+3. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây?  Giải thích vì sao có kết quả đó?
+a = 10, b = 20, c = 30, d = '40'
+a + b + c = ?  10+20+30=60
+a - b / c = ?  10 - 20/30 = 9,3333333333333
+a - (b * c) = ? 10 - (20*30) = -590
+d - (a * b) - c = ? '40' - (10*20) - 30 = -190
+a + b + c + d = ? 10+20+30+'40'= '6040'
+d + a + b + c = ? '40' + 10 + 20 + 30 = '40102030'
+d + a - b + c = ?  '40' + 10 - 20 + 30 = 4020
+a - b + d - c = ?  10 - 20 + '40' - 30 = -1070
+d - c + a - b = ? '40' - 30 + 10 - 20 = 0
+a * b + d * c = ?  10 * 20 + '40'* 30 = 1400
+
+4. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây? Giải thích vì sao có kết quả đó?
+x = true, y = false, z = 10
+
+x && y → ? true + false = false
+x && !y → ? true + true = true
+x && z == 10 → ? true + true = true
+(x && z == 10) → ? true
+!(x && z == 10) → ? false
+!(x && z == 50) → ? true
+x && y && z == 10 → ? false
+x && !y && z == 10 → ? true
+x || y || z == 10 → ? true
+(x && y) || z != 10 → ? false
+!(x && z == 10) || y → ? false
+
+5. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây? Giải thích vì sao có kết quả đó?
+a = 1, b = '2', c = 3, d = '4'
+
+b + d = ?  24
+a + b + c + d = ? '1234'
+a - b + c - d = ? -2
+a - b - c + d = ? '-44'
+(b + d) - (a + c) = ? 20
+(a + b) - (c + d) = ? -22
+a * c + b * d = ? 11
+-b + d = ? '-24'
+-b - d = ? -6
+-(b + d) = ? -24
+
+6. Hãy khai báo các biến và cho biết kết quả của các phép toán dưới đây? Giải thích vì sao có kết quả đó?
+age = 25, isMarried = false, isRich = true
+
+age > 25 && isMarried && isRich → ? false
+(age <= 25 || isMarried) && isRich → ? true
+(age > 10 || isRich) && isMarried → ? false
+!(age >= 15 && isMarried) && isRich → ? true
+!(age <= 20) || !(isMarried && isRich) → ? true
+(age > 8 && !isMarried) || isRich → ? true
+!(age < 8 && !isMarried) || isRich → ? true
+(age == 8 && isMarried) || !isRich → ? false
+
+7 Hãy cho biết kết quả phép toán và biểu thức
+a = 11, b = '22', c = 33
+a + b = ? '1122'
+a - c = ? -22
+a + b + c = ? '112233'
+a + c + b = ? '4422'
+(a + b) % 3 = ? 0
+
+a * b > 50 → ? true
+a ** b > 100 → ? false
+a - (b++) == 5 → ? false
+a - (++b) == 5 → ? false
+
+8. Cho các biến sau: 
+isTall = true, isMuscle = false, isHandsome = true
+Hãy cho biết kết quả của các biểu thức sau:
+isTall && isMuscle → ? false
+!isHandsome → ? false
+!isTall || !isMuscle → ? true
+isTall || !(isMuscle && isHandsome) → ? true
+isMuscle && !(isTall || isHandsome) → ? false
+``` -->

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Hãy khai báo 2 mảng. Mỗi mảng đều có 3 phần tử lần lượt là ‘a’, ‘b’, ‘c’.
+// Cho biết kiểu dữ liệu của 2 mảng đó?
+// -Sử dụng toán tử ‘+’ để ‘cộng’ 2 mảng đó và cho biết kết quả?
+// -Sử dụng toán tử ‘==’ để so sánh 2 mảng đó và cho biết kết quả?
+
+
+
+var arr1 = ['a', 'b', 'c'];
+var arr2 = ['a', 'b', 'c'];
+
+console.log(typeof arr1);
+console.log(typeof arr2);
+
+var tong = arr1 + arr2;
+console.log(tong);
+
+var bang = arr1 == arr2;
+console.log(bang);
+
+// 2. Khai báo 1 mảng gồm 4 số bất kỳ khác nhau.
+// -In ra phần tử có chỉ số 0 và 3 trong mảng.
+// -Thực hiện phép cộng giữa phần tử có chỉ số 1 và 2.
+// -Thực hiện hoán đổi giá trị của phần tử có chỉ số 1 và 3.
+var arr = [1, 2, 3, 4];
+console.log(arr[0]);
+console.log(arr[3]);
+ var tong = arr[1] + arr[2];
+ console.log(tong);
+ var hoanDoi = arr[1];
+ arr[1] = arr[3];
+arr[3] = hoanDoi;
+ console.log(arr);
+ 
+// 3. Khai báo 1 mảng gồm các số bất kỳ.
+// -Hãy in ra các số chẵn trong mảng đó.
+// -Hãy tính tổng các phần tử trong mảng.
+// -Hãy tìm phần tử nhỏ nhất trong mảng.
+var arr3 = [1, 2, 3 , 4, 5];
+for(var i = 0; i < arr3.length; i++) {
+    if(arr3[i] % 2 == 0) {
+        console.log(arr3[i]);
+    }
+}
+var tong = 0;
+for(i = 0; i < arr3.length; i++) {
+     tong +=  arr3[i];
+    
+}
+console.log(tong);
+
+var min = arr3[0];
+for(var i = 1; i < arr3.length; i++) {
+    if(arr3[i] < min) {
+        min = arr3[i];  
+
+    }
+}
+console.log(min);
+
+
+// 4. Khai báo 1 mảng rỗng. Nhập vào số n (n > 0). Hãy điền n số có giá trị ngẫu nhiên vào trong mảng đó.
+var arr4 = [];
+var n = parseInt(prompt("Nhập số n:"));
+if(n > 0) {
+    for(var i = 0; i < n; i++) {
+        arr4.push(Math.floor(Math.random() * 101));
+    }
+    console.log(arr4);
+
+}
+
+// 5. Khai báo 1 mảng gồm 2 phần tử. Nhập vào số n (n > 2). Hãy thêm vào đầu mảng phần tử có giá trị ‘0’ cho đấu khi độ dài của mảng bằng n.
+var arr5 = [2, 3];
+var n = parseInt(prompt("Nhập số n:"));
+if(n > 2) {
+    while(arr5 < n.length) {
+        arr5.unshift(0);
+    }
+    console.log(arr5);
+}
+
+// 6. Khai báo 1 mảng bất kỳ nhiều hơn 1 phần tử. Hãy thực hiện xóa
+// phần tử cuối cùng trong mảng đến khi độ dài mảng bằng 1.
+var arr6 = [2, 3];
+while(1 < arr6.length) {
+    arr6.pop();
+}
+console.log(arr6);
+
+// 7. Nhập vào 1 dãy số s và 1 số n Mỗi số cách nhau bởi dấu ‘,’.
+// -In ra dãy số mới gồm các phần tử có giá trị là bình phương của các số trong dãy s.
+// -Tìm tất cả số trong dãy s có giá trị lớn hơn hoặc bằng n.
+// -Tìm 1 số đầu tiên trong dãy s có giá trị bằng n.
+// Nhập vào dãy số s (mỗi số cách nhau bởi dấu ',')
+// Nhập vào 1 dãy số s và 1 số n 
+// Mỗi số cách nhau bởi dấu ‘,’. 
+// s = '1,2,3,4,5,6'
+// split
+// s = [1,2,3,4,5,6]
+// s = [1,4,9,16,25,36]
+// n = 3
+// -In ra dãy số mới gồm các phần tử có giá trị là bình phương của các số trong dãy s. 
+// s = '1,4,9,16,25,36'
+// -Tìm tất cả số trong dãy s có giá trị lớn hơn hoặc bằng n. 
+// 3
+// 4
+// 5
+// 6
+// -Tìm 1 số đầu tiên trong dãy s có giá trị bằng n.
+
+let s = prompt('Nhập dãy số (các số ngăn cách bởi dấu ,)');
+// let s = '1,2,3,4,5,6,7,8,9,10,11,12';
+// let n = 13
+let n = Number(prompt('Nhập số n: '));
+
+s = s.split(',');
+// -In ra dãy số mới gồm các phần tử có giá trị là bình phương của các số trong dãy s. 
+let result = [];
+for(let element of s){
+    element = Number(element);
+    element = element ** 2;
+    result.push(element);
+}
+console.log(result);
+result = result.join(',')
+console.log(result);
+
+// -Tìm tất cả số trong dãy s có giá trị lớn hơn hoặc bằng n. 
+for(let element of s){
+    element = Number(element);
+    if(element >= n){
+        console.log(element);
+    }
+}
+
+// -Tìm 1 số đầu tiên trong dãy s có giá trị bằng n.
+let finded = false;
+for(let element of s){
+    element = Number(element);
+    if(element === n){
+        console.log(element);
+        finded = element;
+        break;
+    }
+}
+
+if(finded === false){
+    console.log('Không tìm thấy giá trị bằng n')
+} else{
+    console.log('Số đầu tiên trong dãy có giá trị bằng n là:', finded);
+}
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

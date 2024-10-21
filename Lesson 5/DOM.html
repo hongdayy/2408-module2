@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .light {
+            background-color: lightblue;
+        }
+        .dark {
+            background-color: darkblue;
+            color: aliceblue;
+        }
+    </style>
+
+    <div class="light" id="box">Nội dung thẻ HTMML</div>
+    <div class="light" id="box">Nội dung thẻ HTMML</div>
+    <div class="light" id="box">Nội dung thẻ HTMML</div>
+    <div class="light" id="box">Nội dung thẻ HTMML</div>
+
+
+    <h2>Thẻ H2 -1</h2>
+    <h2>Thẻ H2 -2</h2>
+    <h2>Thẻ H2 -3</h2>
+    <h2>Thẻ H2 -4</h2>
+<style>
+    .box-1 .box-2 h2 .link {
+        background-color: yellow;
+    }
+    .box-1 .box-2 h2 .link.active {
+        background-color: orange;
+    }
+</style>
+    <h1 class="test">Thẻ H1</h1>
+    <h2 class="test">Thẻ H2</h2>
+    <h3 class="test">Thẻ H3</h3>
+    <h4 class="test">Thẻ H4</h4>
+
+    <div class="box-1">
+        <div class="box-2">
+            <h2>
+                <a href="#" class="link ">Nội dung thẻ a</a>
+            </h2>
+            <h2>
+                <a href="#" class="link ">Nội dung thẻ a</a>
+            </h2>
+        </div>
+    </div>
+    <script>
+        const box = document.getElementById("box");
+        box. classList.add("dark");
+        console.log(box);
+
+        const listH2 = document.getElementsByTagName("h2");
+        console.log(listH2);
+        console.log(listH2[0]);
+
+        const listTest = document.getElementsByClassName("test");
+        console.log(listTest);
+
+
+        const element = document.querySelector(".box-1 .box-2 h2 .link");
+        element.classList.add("active"); // add thêm class active vào
+        console.log(element);
+
+
+
+
+    </script>
+
+</body>
+</html>

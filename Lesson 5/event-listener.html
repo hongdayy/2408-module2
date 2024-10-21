@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">Button</button>
+
+    <script>
+        function hamMot() {
+            console.log("Việc 1");
+        }
+        function hamHai() {
+            console.log("Việc 2")
+        }
+        const button = document.querySelector("#button");
+
+        // button.onclick = function() {
+        //     hamMot();
+
+        // }
+        // button.onclick = function() {
+        //     hamHai();
+
+        // }
+        button.addEventListener("click", hamMot);
+        button.addEventListener("click", hamHai);
+
+        setTimeout(() => {
+            button.removeEventListener("click", hamHai);
+        }, 5000);
+    </script>
+</body>
+</html>

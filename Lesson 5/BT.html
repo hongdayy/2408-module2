@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Đề bài 1: Sử dụng setTimeout để tự động ẩn nó sau một khoảng thời gian -->
+     <!-- <div class="notification">
+       <p>Thông báo....</p>
+    </div>
+     <style>
+        .notification {
+            border: 1px solid black;
+            width: 20%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            background-color: lightskyblue;
+            border-radius: 10px;
+            border: none;
+        }
+     </style>
+     <script>
+        const in4 = document.querySelector(".notification");
+     
+            setTimeout(function() {
+                in4.style.display = "none";
+            },1000);
+            
+        
+       
+     </script> -->
+      
+
+
+      <!-- Đề bài: Sử dụng setTimeout để làm mờ thông báo sau một khoảng thời gian -->
+      <!-- <div class="notification">
+        <p>Thông báo....</p>
+     </div>
+      <style>
+         .notification {
+             border: 1px solid black;
+             width: 20%;
+             margin: auto;
+             display: flex;
+             justify-content: center;
+             background-color: lightskyblue;
+             border-radius: 10px;
+             border: none;
+         }
+      </style>
+      <script>
+        const in4 = document.querySelector("  .notification");
+        setTimeout(function() {
+            in4.style.opacity = "0.5";
+        },1000);
+      </script> -->
+
+
+
+      <!-- Câu 03: Thay đổi nội dung một phần tử.
+Đề bài:
+Cho đoạn mã HTML sau:
+<div id="element">
+  Nội dung hiện tại
+</div>
+Lấy phần tử bằng ID và thay đổi nội dung của phần tử đó thành: "Nội dung mới" -->
+<!-- <div id="element">
+    Nội dung hiện tại
+  </div>
+  <script>
+   const newIn4 = document.querySelector("#element");
+    newIn4.innerHTML = "Nội dung mới"
+    
+
+
+  </script> -->
+
+
+<!-- Câu 04: Thay đổi màu chữ.
+Đề bài:
+Cho đoạn mã HTML sau:
+<h2 class="title">Tiêu đề 1</h2>
+<h2 class="title">Tiêu đề 2</h2>
+<h2 class="title">Tiêu đề 3</h2>
+<h2 class="title">Tiêu đề 4</h2>
+
+
+<h2 class="title-2">Tiêu đề 5</h2>
+<h2 class="title-2">Tiêu đề 6</h2>
+Lấy danh sách các phần tử có cùng class là "title" và thay đổi thuộc tính của chúng thành màu blue. -->
+
+<!-- <h2 class="title">Tiêu đề 1</h2>
+<h2 class="title">Tiêu đề 2</h2>
+<h2 class="title">Tiêu đề 3</h2>
+<h2 class="title">Tiêu đề 4</h2>
+
+
+<h2 class="title-2">Tiêu đề 5</h2>
+<h2 class="title-2">Tiêu đề 6</h2>
+<script>
+    const find = document.querySelectorAll(".title");
+    for (const element of find) {
+        element.style.color = "blue";
+        
+    }
+</script> -->
+
+
+<!-- 
+Câu 05: Đổi màu nền sau một khoảng thời gian
+Đề bài: Đổi màu nền website sau một khoảng thời gian nhất định -->
+
+<!-- <script>
+    const change = document.querySelector("body");
+    setInterval(function() {
+        change.style.background = "red";
+    },1000);
+</script> -->
+
+
+
+<!-- Câu 06: Thay đổi nút bấm
+Đề bài:
+Tạo một nút và sau một khoảng thời gian nút bấm sẽ thay đổi kích thước và màu sắc. -->
+ <!-- <div class="button1">
+       <button>Thông báo</button>
+    </div>
+     <style>
+        .button1 button {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightskyblue;
+            border-radius: 10px;
+            border: none;
+        }
+     </style>
+     <script>
+        const change = document.querySelector('.button1 button');
+        setInterval(function(){
+            change.style.width = "800px";
+            change.style.color = "red";
+
+        }, 1000)
+
+
+     </script> -->
+
+     <!-- Đề bài: Tạo một ứng dụng todo-list đơn giản bằng cách sử dụng DOM. Cho phép người dùng thêm, 
+     xóa và đánh dấu đã hoàn thành các công việc trong danh sách. -->
+    
+
+
+
+
+     <!-- Câu 02: Tạo một trình chỉnh sửa HTML đơn giản
+     Đề bài:
+     Tạo một trình chỉnh sửa HTML đơn giản sử dụng DOM. Cho phép người dùng viết mã HTML và hiển thị kết quả trực tiếp. -->
+      <!-- <style>
+        * {
+  box-sizing: border-box;
+}
+
+
+.html-editor {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 200px;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+.preview-button {
+  background: #5b5b5b;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.preview-button:hover {
+  background: green;
+}
+
+
+.preview {
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  min-height: 30px;
+}
+
+      </style>
+      <textarea id="html-editor" class="html-editor"></textarea>
+
+
+      <button id="preview-button" class="preview-button">Xem trước</button>
+      
+      
+      <div id="preview" class="preview"></div>
+      <script>
+        
+        const htmlEditor = document.querySelector("#html-editor");
+        const previewButton = document.querySelector("#preview-button");
+        const preview = document.querySelector("#preview");
+
+        previewButton.addEventListener("click", function(){
+            const text = htmlEditor.value;
+            preview.innerHTML = text;
+        })
+  
+
+      </script> -->
+
+
+
+
+      <!-- Câu 03: Tạo một bộ chọn màu
+      Đề bài:
+      Tạo một bộ chọn màu bằng cách sử dụng DOM. Cho phép người dùng chọn một màu từ một bảng màu và hiển thị giá trị màu đã chọn. -->
+
+      <!-- <style>
+        .color-preview {
+  width: 120px;
+  height: 60px;
+}
+
+      </style>
+      <input type="color" id="color-picker" />
+
+
+      <p>Xem trước:</p>
+      
+      
+      <div id="color-preview" class="color-preview"></div>
+      <script>
+        const colorPicker = document.querySelector("#color-picker");
+        const colorPreviewr = document.querySelector("#color-preview");
+
+        colorPicker.addEventListener("change", function(){
+            const choose = colorPicker.value;
+            colorPreviewr.style.backgroundColor = choose;
+
+        })
+      </script> -->
+
+<!-- 
+      Đề bài:
+Tạo một button, khi click vào button sẽ hiển thị lên một modal.
+Ví dụ: -->
+<!-- <style>
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+</style>
+<button id="open-modal-button">Mở modal</button>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close-button" class="close-button">&times;</span>
+    <h1>Tiêu đề modal</h1>
+    <p>Nội dung của modal...</p>
+  </div>
+</div>
+
+<script>
+    const openmodalbutton = document.querySelector("#open-modal-button");
+    const modal = document.querySelector("#modal");
+    const closebutton = document.querySelector("#close-button");
+
+    openmodalbutton.addEventListener("click", function() {
+        modal.style.display = "block";
+
+    });
+    closebutton.addEventListener("click", function() {
+        modal.style.display = "none";
+
+    });
+</script> -->
+
+
+<!-- Câu 05: Tạo một menu dạng tabs
+Đề bài:
+Tạo một menu dạng tabs, mặc định hiển thị ra tab đầu tiên. Click vào tab khác sẽ ẩn tab hiện tại và hiển thị tab mới.
+ -->
+<style>
+    .tab {
+  overflow: hidden;
+}
+
+
+.tab-button {
+  background-color: #f1f1f1;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: #ddd;
+}
+
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+
+.tab-content.active {
+  display: block;
+}
+
+</style>
+<div class="tab">
+    <button class="tab-button active" onclick="openTab(event, 'tab1')">Tab 1</button>
+    <button class="tab-button" onclick="openTab(event, 'tab2')">Tab 2</button>
+    <button class="tab-button" onclick="openTab(event, 'tab3')">Tab 3</button>
+  
+  
+    <div id="tab1" class="tab-content active">
+      <h3>Nội dung của Tab 1</h3>
+      <p>Đây là nội dung của Tab 1.</p>
+    </div>
+    <div id="tab2" class="tab-content">
+      <h3>Nội dung của Tab 2</h3>
+      <p>Đây là nội dung của Tab 2.</p>
+    </div>
+    <div id="tab3" class="tab-content">
+      <h3>Nội dung của Tab 3</h3>
+      <p>Đây là nội dung của Tab 3.</p>
+    </div>
+  </div>
+<script>
+    const tabButton = document.querySelectorAll(".tab-button");
+
+
+</script>  
+
+
+      
+      
+</body>
+</html>

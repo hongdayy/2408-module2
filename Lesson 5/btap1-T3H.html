@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Things</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- 1. Tạo một danh sách đồ vật yêu thích của bạn với ul#favorite-list và các li.favorite-list-item. 
+Sử dụng DOM để thay đổi nội dung của tất cả li.favorite-list-item thành “I love this thing”. 
+Sử dụng DOM để thay đổi màu chữ của các li.favorite-list-item thành màu đỏ. 
+Nhập vào 1 đoạn text từ bàn phím. Thêm vào ul#favorite-list một li có nội dung là text vừa nhập vào. -->
+<ul id="favorite-list">
+    <li class="favorite-list-item">Đồ skinacre</li>
+    <li class="favorite-list-item">Mỹ phẩm</li>
+    <li class="favorite-list-item">Iphone mẫu mới nhất</li>
+</ul>
+
+<script>
+
+    const change = document.querySelectorAll("li.favorite-list-item");
+    for (const show of change) {
+        show.innerHTML = 'I love this thing';   
+        show.style.color = "red";
+    }
+    let content= prompt("Nhập nội dung: ");
+let $tagLi = document.createElement('li');
+$tagLi.innerText = content;
+document.querySelector('ul#favorite-list').appendChild($tagLi)
+   
+</script>
+
+
+    
+
+</body>
+</html>
